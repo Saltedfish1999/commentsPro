@@ -1,0 +1,33 @@
+{
+  "name": "commentspro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "lint:pritter": "prettier --write src/",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@yike-design/resolver": "^0.0.1",
+    "@yike-design/ui": "^0.0.19",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.5.1",
+    "less": "^4.2.1",
+    "mockjs": "^1.1.0",
+    "unplugin-auto-import": "^0.18.5",
+    "unplugin-vue-components": "^0.27.4",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/mockjs": "^1.0.10",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "prettier": "3.4.2",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.8"
+  }
+}
