@@ -37,7 +37,7 @@ export const navList = [
 ];
 export const overLink = [
   {
-    path: '',
+    path: '/local',
     name: '本地文件',
     total: '0M',
     bgColor: '180deg, #2b5aedcc 0%, #2B5AED 100%',

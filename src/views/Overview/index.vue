@@ -63,9 +63,9 @@
         </div>
       </div>
       <div class="comment">
-        <yk-title :level="3">{{ `评论 ` + comments.data.count }}</yk-title>
+        <yk-title :level="3">{{ `评论 ` + commentsData.total }}</yk-title>
         <div class="comments-container">
-          <div v-for="item in comments.data.list" :key="item.id">
+          <div v-for="item in commentsData.list" :key="item.id">
             <div class="user-comments">
               <yk-avatar style="background-color: rgb(245 61 61)">
                 <icon-alarm-fill />
@@ -94,7 +94,7 @@
                     </yk-text>
                   </div>
                 </div>
-                <div>
+                <div class="deleteButton">
                   <IconDeleteOutline />
                 </div>
               </div>
@@ -103,7 +103,14 @@
           </div>
         </div>
         <div>
-          <yk-pagination fix-width :total="value" style="margin-top: 12px" />
+          <yk-pagination
+            fix-width
+            v-model:current="request.nowPage"
+            v-model:page-size="request.pageSize"
+            :total="parseInt(commentsData.total) * 2"
+            style="margin-top: 12px"
+            @change="handleSizeChange"
+          />
         </div>
       </div>
     </div>
@@ -111,29 +118,67 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
-import { overLink, userComments } from '../../utils/menu'
+import { onMounted, reactive, ref } from 'vue'
+import { overLink } from '../../utils/menu'
 import { overView, visit, check, comments } from '../../mock/data'
 import { lineChart } from '../../components/Echarts/index'
 
 const gathers = ref(overLink)
-const value = ref(30)
 
 const visitRadio = ref('week') // 访问量类型
 const visitData = ref([]) // 访问量数据
 const checkRadio = ref('week') //检测量数据
 
+const commentsData = reactive({
+  total: '',
+  list: comments.data.list,
+})
+
+type Request = {
+  token?: string
+  pageSize: number
+  nowPage: number
+  count?: boolean
+}
+const request: Request = {
+  pageSize: 4,
+  nowPage: 1,
+  count: false,
+}
+
+/**
+ * 分页数据的获取
+ */
+const getPage = () => {
+  const { count, list } = comments.data
+  commentsData.total = count
+  commentsData.list = list.slice(
+    (request.nowPage - 1) * request.pageSize,
+    request.nowPage * request.pageSize,
+  )
+}
+/**
+ * 分页跳转
+ */
+const handleSizeChange = (val: number) => {
+  request.nowPage = val
+  console.log('当前页数是' + val)
+  getPage()
+}
+/**
+ * 获取图表中的数据
+ */
 const getVist = (e: string) => {
   let data = visit.data
   if (e === 'week') {
     data = data.slice(0, 7)
   }
   visitData.value = data
-  console.log(visitData.value)
-  console.log(check.data.device)
 }
 
-//获取数据
+/**
+ * 获取博客总数
+ */
 const getData = () => {
   let data = overView.data
   gathers.value[0].total = data.file
@@ -143,6 +188,7 @@ const getData = () => {
 }
 
 onMounted(() => {
+  getPage()
   getVist(visitRadio.value)
   getData()
 })
@@ -239,6 +285,13 @@ onMounted(() => {
                 max-width: 100px;
               }
             }
+            .deleteButton {
+              visibility: hidden;
+            }
+          }
+          .comments-item:hover .deleteButton {
+            visibility: visible;
+            cursor: pointer;
           }
         }
       }
@@ -247,5 +300,10 @@ onMounted(() => {
 }
 .yk-title {
   margin: 0;
+}
+.yk-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 </style>

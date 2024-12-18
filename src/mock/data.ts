@@ -63,8 +63,8 @@ export const check = Mock.mock({
 
 export const comments = Mock.mock({
   'data': {
-    'count': 4,
-    'list|4': [
+    'count': 24,
+    'list|24': [
       {
         'id|+1': 0,
         'article': {

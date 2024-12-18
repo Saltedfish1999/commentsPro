@@ -1,20 +1,25 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
-import indexView from "../views/Indexview/index.vue";
-import overView from "../views/Overview/index.vue";
-import mainView from "../views/main.vue";
+import indexView from '../views/Indexview/index.vue';
+import overView from '../views/overView/index.vue';
+import mainView from '../views/main.vue';
+import localView from '../views/localView/index.vue';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: mainView,
     children: [
       {
-        path: "/over",
+        path: '/over',
         component: overView,
       },
       {
-        path: "/main",
+        path: '/local',
+        component: localView,
+      },
+      {
+        path: '/main',
         component: indexView,
       },
     ],
