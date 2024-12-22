@@ -83,3 +83,36 @@ export const userComments = [
     content: '很高心见到了你，你是那么的美丽动人！',
   },
 ];
+
+export const imgInfo = [
+  {
+    id: 1,
+    src: 'https://www.huohuo90.com:3005/logo/yike1.png',
+    name: 'yike1.png',
+  },
+  {
+    id: 2,
+    src: 'https://www.huohuo90.com:3005/logo/yike1.png',
+    name: 'yike1.png',
+  },
+  {
+    id: 3,
+    src: 'https://www.huohuo90.com:3005/logo/yike1.png',
+    name: 'yike1.png',
+  },
+  {
+    id: 4,
+    src: 'https://www.huohuo90.com:3005/logo/yike1.png',
+    name: 'yike1.png',
+  },
+  {
+    id: 5,
+    src: 'https://www.huohuo90.com:3005/logo/yike1.png',
+    name: 'yike1.png',
+  },
+  {
+    id: 6,
+    src: 'https://www.huohuo90.com:3005/logo/yike1.png',
+    name: 'yike1.png',
+  },
+];
