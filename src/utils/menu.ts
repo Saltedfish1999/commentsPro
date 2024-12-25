@@ -86,31 +86,37 @@ export const userComments = [
 
 export const imgInfo = [
   {
+    selected: true,
     id: 1,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
+    selected: false,
     id: 2,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
+    selected: false,
     id: 3,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
+    selected: false,
     id: 4,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
+    selected: false,
     id: 5,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
+    selected: false,
     id: 6,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',

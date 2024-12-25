@@ -64,14 +64,18 @@
         <yk-table-column property="desc" label="操作"></yk-table-column>
         <template #tbody>
           <tr
-            class="yk-table_row"
+            class="yk-table__row"
             v-for="item in subsetStore.data"
             :key="item.id"
           >
-            <td>{{ item.name }}</td>
-            <td>{{ item.value }}</td>
-            <td></td>
-            <td></td>
+            <td class="yk-table__cell">
+              <yk-input v-model="item.name" />
+            </td>
+            <td class="yk-table__cell">{{ item.value }}</td>
+            <td class="yk-table__cell">{{ item.moment }}</td>
+            <td class="yk-table__cell text-right" @click="deleteTag(item.id)">
+              <yk-text type="primary" style="cursor: pointer">删除</yk-text>
+            </td>
           </tr>
         </template>
       </yk-table>
@@ -96,6 +100,16 @@ const inputValue = ref<string>()
 const proxy: any = getCurrentInstance()?.proxy
 const modalVisible = ref(false)
 
+/**
+ * 删除标签
+ */
+const deleteTag = (id: number) => {
+  for (let i = 0; i < subsetStore.data.length; i++) {
+    if (subsetStore.data[i].id === id) {
+      subsetStore.data.splice(i, 1)
+    }
+  }
+}
 /**
  * 点击弹窗的确按钮
  */

@@ -110,7 +110,22 @@ export const subset = Mock.mock({
         'id|+1': 0,
         'name': '@ctitle(2,6)',
         'value|0-30': 4,
+        'moment': '@date("yyyy-MM-dd")',
       },
     ],
   },
+});
+
+// 图片数据
+export const files = Mock.mock({
+  'count': 64,
+  'list|64': [
+    {
+      'id|+1': 0,
+      'url|1': 'photo',
+      'fileName': '@title(2,6)',
+      'format': 'jpeg',
+      'subsetid|0-4': 3,
+    },
+  ],
 });
