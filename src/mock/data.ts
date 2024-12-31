@@ -129,3 +129,17 @@ export const files = Mock.mock({
     },
   ],
 });
+
+//标签
+export const tag = Mock.mock({
+  'data': {
+    'count': 24,
+    'list|4': [
+      {
+        'id|+1': 0,
+        'name': '@ctitle(2,6)',
+        'moment': '@date("yyyy-MM-dd")',
+      },
+    ],
+  },
+});

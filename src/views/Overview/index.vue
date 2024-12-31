@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <h2>总览</h2>
+    <TopTitle name="总览" :is-search="false" />
     <div class="mid-container">
       <div
         class="card-content"
@@ -122,6 +122,7 @@ import { onMounted, reactive, ref } from 'vue'
 import { overLink } from '../../utils/menu'
 import { overView, visit, check, comments } from '../../mock/data'
 import { lineChart } from '../../components/Echarts/index'
+import TopTitle from '../../components/TopTitle.vue'
 
 const gathers = ref(overLink)
 

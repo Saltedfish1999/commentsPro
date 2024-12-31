@@ -4,6 +4,7 @@ import indexView from '../views/Indexview/index.vue';
 import overView from '../views/overView/index.vue';
 import mainView from '../views/main.vue';
 import localView from '../views/localView/index.vue';
+import blogView from '../views/blogView/index.vue';
 
 const routes = [
   {
@@ -21,6 +22,10 @@ const routes = [
       {
         path: '/main',
         component: indexView,
+      },
+      {
+        path: '/article',
+        component: blogView,
       },
     ],
   },

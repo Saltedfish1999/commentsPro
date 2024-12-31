@@ -1,3 +1,5 @@
+import { comments } from '../mock/data';
+
 export const navList = [
   {
     path: 'over',
@@ -86,39 +88,72 @@ export const userComments = [
 
 export const imgInfo = [
   {
-    selected: true,
     id: 1,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
-    selected: false,
     id: 2,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
-    selected: false,
     id: 3,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
-    selected: false,
     id: 4,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
-    selected: false,
     id: 5,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
   },
   {
-    selected: false,
     id: 6,
     src: 'https://www.huohuo90.com:3005/logo/yike1.png',
     name: 'yike1.png',
+  },
+];
+
+export const cardInfo = [
+  {
+    image: 'https://www.huohuo90.com:3005/logo/yike.png',
+    id: 1,
+    title: '但为君故',
+    content:
+      '亮着黄灯的出租车在街口停下，再往前就是能淹到底盘的积水。路明非跳下车来，撑开一柄大伞，后排车门被人推开，伸出女孩的小腿来，小腿的线条纤长美好，肤色素白耀眼，脚上穿着白色的高跟短靴。那只脚在积水中一踩就缩了回去，片刻之后再伸出来，只剩赤脚踩在水里。穿塔夫绸露肩白裙的女孩钻到伞下，爱惜地把新靴子抱在怀里。两人顶着一柄伞跑向旅馆，男孩拎着大大小小的盒子。雨水在街面上浩荡奔流，浑浊的水花在腿肚上跳荡，女孩轻盈得像是涉水过河的白鹿，脚踝上金色的链子哗哗作响',
+    date: '2022-12-11',
+    view: 1234,
+    like: 123,
+    comments: 12,
+    state: 1,
+  },
+  {
+    image: 'https://www.huohuo90.com:3005/logo/yike.png',
+    id: 2,
+    title: '但为君故',
+    content:
+      '亮着黄灯的出租车在街口停下，再往前就是能淹到底盘的积水。路明非跳下车来，撑开一柄大伞，后排车门被人推开，伸出女孩的小腿来，小腿的线条纤长美好，肤色素白耀眼，脚上穿着白色的高跟短靴。那只脚在积水中一踩就缩了回去，片刻之后再伸出来，只剩赤脚踩在水里。穿塔夫绸露肩白裙的女孩钻到伞下，爱惜地把新靴子抱在怀里。',
+    date: '2022-12-11',
+    view: 1234,
+    like: 123,
+    comments: 12,
+    state: 0,
+  },
+  {
+    image: 'https://www.huohuo90.com:3005/logo/yike.png',
+    id: 3,
+    title: '但为君故',
+    content:
+      '亮着黄灯的出租车在街口停下，再往前就是能淹到底盘的积水。路明非跳下车来，撑开一柄大伞，后排车门被人推开，伸出女孩的小腿来，小腿的线条纤长美好，肤色素白耀眼，脚上穿着白色的高跟短靴。那只脚在积水中一踩就缩了回去，片刻之后再伸出来，只剩赤脚踩在水里。穿塔夫绸露肩白裙的女孩钻到伞下，爱惜地把新靴子抱在怀里。两人顶着一柄伞跑向旅馆，男孩拎着大大小小的盒子。雨水在街面上浩荡奔流，浑浊的水花在腿肚上跳荡，女孩轻盈得像是涉水过河的白鹿，脚踝上金色的链子哗哗作响',
+    date: '2022-12-11',
+    view: 1234,
+    like: 123,
+    comments: 12,
+    state: 1,
   },
 ];
