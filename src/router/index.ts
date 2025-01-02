@@ -5,6 +5,7 @@ import overView from '../views/overView/index.vue';
 import mainView from '../views/main.vue';
 import localView from '../views/localView/index.vue';
 import blogView from '../views/blogView/index.vue';
+import photoView from '../views/photoView/index.vue';
 
 const routes = [
   {
@@ -26,6 +27,10 @@ const routes = [
       {
         path: '/article',
         component: blogView,
+      },
+      {
+        path: '/diary',
+        component: photoView,
       },
     ],
   },

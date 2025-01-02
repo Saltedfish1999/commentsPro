@@ -8,6 +8,13 @@ export interface SubsetData {
 //标签
 export interface LabelData {
   id: number;
-  name: string;
+  title: string;
+  content: string;
+  date: string;
+  view: number;
+  like: number;
+  comments: number;
+  name?: string;
   moment?: string;
+  state: number;
 }

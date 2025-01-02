@@ -40,15 +40,23 @@
           </ul>
         </div>
         <div class="operate-icon">
-          <yk-tooltip placement="top" title="发布">
-            <IconSendOutline @click="deleteArticle(cardData.id)" />
+          <yk-tooltip placement="top" title="发布" v-if="cardData.state === 0">
+            <IconSendOutline @click="updateState(1)" />
+          </yk-tooltip>
+          <yk-tooltip placement="top" title="撤回" v-if="cardData.state === 1">
+            <IconBackOutline @click="updateState(0)" />
           </yk-tooltip>
           <yk-tooltip placement="top" title="编辑">
             <IconModifyOutline />
           </yk-tooltip>
-          <yk-tooltip placement="top" title="删除">
+          <yk-popconfirm
+            title="确定删除"
+            content="删除后将不可回复"
+            :arrow="false"
+            @confirm="deleteArticle(cardData.id)"
+          >
             <IconDeleteOutline />
-          </yk-tooltip>
+          </yk-popconfirm>
         </div>
       </div>
     </div>
@@ -69,12 +77,20 @@ const props = defineProps({
 const cardData = props.cardData
 
 /**
- * 删除文章
+ * 提交删除文章请求
  */
 const deleteArticle = (id: number) => {
   emits('delete', id)
 }
-onMounted(() => {})
+/**
+ * 提交编辑文章请求
+ */
+const updateState = (e: number) => {
+  emits('state', { id: cardData.id, state: e })
+}
+onMounted(() => {
+  console.log(cardData)
+})
 </script>
 
 <style lang="less" scoped>

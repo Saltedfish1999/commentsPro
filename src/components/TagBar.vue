@@ -88,7 +88,6 @@
 
 <script lang="ts" setup>
 import { subset, state } from '../mock/data'
-import { SubsetData } from '../utils/interface'
 import { useSubsetStore } from '../store'
 import { getCurrentInstance, onMounted, ref } from 'vue'
 

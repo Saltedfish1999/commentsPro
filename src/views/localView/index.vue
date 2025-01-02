@@ -156,9 +156,6 @@ const getData = () => {
 /**
  * 分页跳转
  */
-/**
- * 分页跳转
- */
 const handleSizeChange = (val: number) => {
   request.nowPage = val
   console.log('当前页数是' + val)

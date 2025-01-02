@@ -121,7 +121,6 @@ export const imgInfo = [
 
 export const cardInfo = [
   {
-    image: 'https://www.huohuo90.com:3005/logo/yike.png',
     id: 1,
     title: '但为君故',
     content:
@@ -133,7 +132,6 @@ export const cardInfo = [
     state: 1,
   },
   {
-    image: 'https://www.huohuo90.com:3005/logo/yike.png',
     id: 2,
     title: '但为君故',
     content:
@@ -145,7 +143,6 @@ export const cardInfo = [
     state: 0,
   },
   {
-    image: 'https://www.huohuo90.com:3005/logo/yike.png',
     id: 3,
     title: '但为君故',
     content:
