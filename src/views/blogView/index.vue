@@ -119,7 +119,7 @@ onMounted(() => {
       display: flex;
       flex-direction: column;
       gap: 24px;
-      align-items: center;
+      align-items: end;
     }
     .card-manage {
       width: 278px;

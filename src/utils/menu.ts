@@ -1,5 +1,3 @@
-import { comments } from '../mock/data';
-
 export const navList = [
   {
     path: 'over',
@@ -152,5 +150,58 @@ export const cardInfo = [
     like: 123,
     comments: 12,
     state: 1,
+  },
+];
+
+export const imageInfo = [
+  {
+    id: 1,
+    imgSrc: '../../public/backiee-18629.jpg',
+    imageSrc1: '../../public/backiee-18629.jpg',
+    imageSrc2: '../../public/backiee-18629.jpg',
+    imageSrc3: '../../public/backiee-18629.jpg',
+    title: '古风暖意秋天的气息',
+    view: 1234,
+    like: 32,
+  },
+  {
+    id: 2,
+    imgSrc: '../../public/backiee-18629.jpg',
+    imageSrc1: '../../public/backiee-18629.jpg',
+    imageSrc2: '../../public/backiee-18629.jpg',
+    imageSrc3: '../../public/backiee-18629.jpg',
+    title: '古风暖意秋天的气息',
+    view: 1234,
+    like: 32,
+  },
+  {
+    id: 3,
+    imgSrc: '../../public/backiee-18629.jpg',
+    imageSrc1: '../../public/backiee-18629.jpg',
+    imageSrc2: '../../public/backiee-18629.jpg',
+    imageSrc3: '../../public/backiee-18629.jpg',
+    title: '古风暖意秋天的气息',
+    view: 1234,
+    like: 32,
+  },
+  {
+    id: 4,
+    imgSrc: '../../public/backiee-18629.jpg',
+    imageSrc1: '../../public/backiee-18629.jpg',
+    imageSrc2: '../../public/backiee-18629.jpg',
+    imageSrc3: '../../public/backiee-18629.jpg',
+    title: '古风暖意秋天的气息',
+    view: 1234,
+    like: 32,
+  },
+  {
+    id: 5,
+    imgSrc: '../../public/backiee-18629.jpg',
+    imageSrc1: '../../public/backiee-18629.jpg',
+    imageSrc2: '../../public/backiee-18629.jpg',
+    imageSrc3: '../../public/backiee-18629.jpg',
+    title: '古风暖意秋天的气息',
+    view: 1234,
+    like: 32,
   },
 ];

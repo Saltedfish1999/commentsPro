@@ -29,7 +29,7 @@ const routes = [
         component: blogView,
       },
       {
-        path: '/diary',
+        path: '/gallary',
         component: photoView,
       },
     ],
