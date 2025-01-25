@@ -6,6 +6,7 @@ import mainView from '../views/main.vue';
 import localView from '../views/localView/index.vue';
 import blogView from '../views/blogView/index.vue';
 import photoView from '../views/photoView/index.vue';
+import noteView from '../views/noteView/index.vue';
 
 const routes = [
   {
@@ -31,6 +32,10 @@ const routes = [
       {
         path: '/gallary',
         component: photoView,
+      },
+      {
+        path: '/diary',
+        component: noteView,
       },
     ],
   },

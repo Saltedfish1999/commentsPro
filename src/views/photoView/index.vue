@@ -186,7 +186,7 @@ const handleSizeChange = (val: number) => {
       display: flex;
       gap: 2px;
       .yk-image {
-        border-radius: 0 0 12px 0;
+        border-radius: 0 0 12px 12px;
       }
     }
   }

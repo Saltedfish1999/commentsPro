@@ -4,7 +4,9 @@
       <header-bar></header-bar>
     </div>
     <div class="container">
-      <aside-menu></aside-menu>
+      <div class="aside">
+        <aside-menu></aside-menu>
+      </div>
       <div class="main">
         <router-view />
       </div>
@@ -27,6 +29,9 @@ import AsideMenu from '../components/AsideMenu.vue'
 .container {
   display: flex;
   justify-content: center;
+  .aside {
+    width: 160px;
+  }
   .main {
     flex: 1;
   }

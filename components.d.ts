@@ -9,6 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     AsideMenu: typeof import('./src/components/AsideMenu.vue')['default']
     BlogCard: typeof import('./src/components/BlogCard.vue')['default']
+    DiaryCard: typeof import('./src/components/DiaryCard.vue')['default']
+    DiaryEditor: typeof import('./src/components/DiaryEditor.vue')['default']
     HeaderBar: typeof import('./src/components/HeaderBar.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconAlarmFill: typeof import('@yike-design/ui/es/components/svg-icon')['IconAlarmFill']
@@ -26,6 +28,7 @@ declare module 'vue' {
     IconSearchOutline: typeof import('@yike-design/ui/es/components/svg-icon')['IconSearchOutline']
     IconSendOutline: typeof import('@yike-design/ui/es/components/svg-icon')['IconSendOutline']
     IconSettingsOutline: typeof import('@yike-design/ui/es/components/svg-icon')['IconSettingsOutline']
+    IconSunFill: typeof import('@yike-design/ui/es/components/svg-icon')['IconSunFill']
     IconSunOutline: typeof import('@yike-design/ui/es/components/svg-icon')['IconSunOutline']
     IconSwitchOutline: typeof import('@yike-design/ui/es/components/svg-icon')['IconSwitchOutline']
     IconTickMinOutline: typeof import('@yike-design/ui/es/components/svg-icon')['IconTickMinOutline']
